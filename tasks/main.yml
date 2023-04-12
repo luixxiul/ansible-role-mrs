@@ -1,0 +1,20 @@
+---
+
+- tags:
+    - setup-all
+    - setup-mrs
+    - install-all
+    - install-mrs
+  block:
+    - when: mrs_enabled | bool
+      ansible.builtin.include_tasks: "{{ role_path }}/tasks/validate_config.yml"
+
+    - when: mrs_enabled | bool
+      ansible.builtin.include_tasks: "{{ role_path }}/tasks/install.yml"
+
+- tags:
+    - setup-all
+    - setup-mrs
+  block:
+    - when: not mrs_enabled | bool
+      ansible.builtin.include_tasks: "{{ role_path }}/tasks/uninstall.yml"

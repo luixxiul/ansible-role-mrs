@@ -1,0 +1,20 @@
+{% if mrs_container_labels_traefik_enabled %}
+traefik.enable=true
+
+{% if mrs_container_labels_traefik_docker_network %}
+traefik.docker.network={{ mrs_container_labels_traefik_docker_network }}
+{% endif %}
+
+traefik.http.services.{{ mrs_identifier }}.loadbalancer.server.port=8080
+
+
+traefik.http.routers.{{ mrs_identifier }}.rule={{ mrs_container_labels_traefik_rule }}
+traefik.http.routers.{{ mrs_identifier }}.service={{ mrs_identifier }}
+traefik.http.routers.{{ mrs_identifier }}.tls={{ mrs_container_labels_traefik_tls | to_json }}
+{% if mrs_container_labels_traefik_tls %}
+traefik.http.routers.{{ mrs_identifier }}.tls.certResolver={{ mrs_container_labels_traefik_tls_certResolver }}
+{% endif %}
+traefik.http.routers.{{ mrs_identifier }}.entrypoints={{ mrs_container_labels_traefik_entrypoints }}
+{% endif %}
+
+{{ mrs_container_labels_additional_labels }}

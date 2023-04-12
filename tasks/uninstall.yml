@@ -1,0 +1,25 @@
+---
+
+- name: Check existence of MRS systemd service
+  ansible.builtin.stat:
+    path: "{{ devture_systemd_docker_base_systemd_path }}/{{ mrs_identifier }}.service"
+  register: mrs_service_stat
+
+- when: mrs_service_stat.stat.exists | bool
+  block:
+    - name: Ensure MRS systemd service is stopped
+      ansible.builtin.service:
+        name: "{{ mrs_identifier }}"
+        state: stopped
+        enabled: false
+        daemon_reload: true
+
+    - name: Ensure MRS systemd service does not exist
+      ansible.builtin.file:
+        path: "{{ devture_systemd_docker_base_systemd_path }}/{{ mrs_identifier }}.service"
+        state: absent
+
+    - name: Ensure MRS path doesn't exist
+      ansible.builtin.file:
+        path: "{{ mrs_base_path }}"
+        state: absent

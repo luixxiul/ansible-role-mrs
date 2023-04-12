@@ -1,0 +1,87 @@
+---
+
+mrs_enabled: false
+
+mrs_identifier: mrs
+
+# The fully-qualified name of your Matrix Rooms Search API server (e.g. `mrs.example.com`)
+mrs_hostname: ''
+
+mrs_uid: ''
+mrs_gid: ''
+
+mrs_version: latest
+
+mrs_container_image: "{{ mrs_container_image_registry_prefix }}etke.cc/mrs/api:{{ mrs_container_image_tag }}"
+mrs_container_image_tag: "{{ mrs_version }}"
+mrs_container_image_force_pull: "{{ mrs_container_image.endswith(':latest') }}"
+mrs_container_image_registry_prefix: registry.gitlab.com/
+
+mrs_container_network: "{{ mrs_identifier }}"
+
+# A list of additional container networks that the container would be connected to.
+# The playbook does not create these networks, so make sure they already exist.
+mrs_container_additional_networks: []
+
+mrs_base_path: "/mrs"
+mrs_data_dir_path: "{{ mrs_base_path }}/data"
+
+# admin credentials
+mrs_admin_login: ''
+mrs_admin_password: ''
+# list of IPs allowed to access admin endpoints
+mrs_admin_ips: []
+
+# CORS
+mrs_cors_allow_origins: ['*']
+mrs_cors_allow_methods: ['GET', 'POST']
+mrs_cors_allow_headers: []
+mrs_cors_max_age: 0
+
+# paths inside container
+mrs_path_index: "/mnt/data/index"
+mrs_path_data: "/mnt/data/data.db"
+mrs_path_config: "/mnt/config.yml"
+
+# workers config
+mrs_workers_discovery: 20
+mrs_workers_parsing: 5
+
+# servers bootstrap
+mrs_servers: []
+
+mrs_systemd_required_systemd_services_list: ['docker.service']
+
+# mrs_container_labels_traefik_enabled controls whether labels to assist a Traefik reverse-proxy will be attached to the container.
+# See `../templates/labels.j2` for details.
+#
+# To inject your own other container labels, see `mrs_container_labels_additional_labels`.
+mrs_container_labels_traefik_enabled: true
+mrs_container_labels_traefik_docker_network: ''
+mrs_container_labels_traefik_rule: "Host(`{{ mrs_hostname }}`)"
+mrs_container_labels_traefik_entrypoints: web-secure
+mrs_container_labels_traefik_tls: "{{ mrs_container_labels_traefik_entrypoints != 'web' }}"
+mrs_container_labels_traefik_tls_certResolver: default  # noqa var-naming
+
+# mrs_container_http_bind_port controls whether (and how) the container
+# exposes its HTTP port.
+# Leave empty to not expose it.
+# Example values: `127.0.0.1:8080`, `0.0.0.0:8080`, `8080`.
+mrs_container_http_bind_port: ''
+
+# mrs_container_labels_additional_labels contains a multiline string with additional labels to add to the container label file.
+# See `../templates/labels.j2` for details.
+#
+# Example:
+# mrs_container_labels_additional_labels: |
+#   my.label=1
+#   another.label="here"
+mrs_container_labels_additional_labels: ''
+
+# mrs_container_additional_environment_variables contains a multiline string with additional environment variables to pass to the container.
+#
+# Example:
+# mrs_container_additional_environment_variables: |
+#   VAR=1
+#   ANOTHER=value
+mrs_container_additional_environment_variables: ''

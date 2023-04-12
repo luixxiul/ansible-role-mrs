@@ -1,0 +1,19 @@
+port: 8080
+admin:
+  login: {{ mrs_admin_login }}
+  password: {{ mrs_admin_password }}
+  ips: {{ mrs_admin_ips }}
+cors:
+  allow_origins: {{ mrs_cors_allow_origins }}
+  allow_methods: {{ mrs_cors_allow_methods }}
+  allow_headers: {{ mrs_cors_allow_headers }}
+  max_age: {{ mrs_cors_max_age }}
+path:
+  index: {{ mrs_path_index }}
+  data: {{ mrs_path_data }}
+workers:
+  discovery: {{ mrs_workers_discovery }}
+  parsing: {{ mrs_workers_parsing }}
+servers: {{ mrs_servers }}
+
+# vi: ft=yaml
