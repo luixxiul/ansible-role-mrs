@@ -8,6 +8,11 @@ cors:
   allow_methods: {{ mrs_cors_allow_methods }}
   allow_headers: {{ mrs_cors_allow_headers }}
   max_age: {{ mrs_cors_max_age }}
+cache:
+  max_age: {{ mrs_cache_max_age }}
+  bunny:
+    url: {{ mrs_cache_bunny_url }}
+    key: {{ mrs_cache_bunny_key }}
 path:
   index: {{ mrs_path_index }}
   data: {{ mrs_path_data }}

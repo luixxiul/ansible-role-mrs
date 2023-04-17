@@ -38,6 +38,11 @@ mrs_cors_allow_methods: ['GET', 'POST']
 mrs_cors_allow_headers: []
 mrs_cors_max_age: 0
 
+# cache
+mrs_cache_max_age: 0
+mrs_cache_bunny_url: ''
+mrs_cache_bunny_key: ''
+
 # paths inside container
 mrs_path_index: "/mnt/data/index"
 mrs_path_data: "/mnt/data/data.db"
