@@ -13,6 +13,11 @@ cache:
   bunny:
     url: {{ mrs_cache_bunny_url }}
     key: {{ mrs_cache_bunny_key }}
+cron:
+  discovery: {{ mrs_cron_discovery }}
+  parsing: {{ mrs_cron_parsing }}
+  indexing: {{ mrs_cron_indexing }}
+  full: {{ mrs_cron_full }}
 path:
   index: {{ mrs_path_index }}
   data: {{ mrs_path_data }}

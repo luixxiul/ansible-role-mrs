@@ -43,6 +43,12 @@ mrs_cache_max_age: 0
 mrs_cache_bunny_url: ''
 mrs_cache_bunny_key: ''
 
+# cron
+mrs_cron_discovery: ''
+mrs_cron_parsing: ''
+mrs_cron_indexing: ''
+mrs_cron_full: ''
+
 # paths inside container
 mrs_path_index: "/mnt/data/index"
 mrs_path_data: "/mnt/data/data.db"
