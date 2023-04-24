@@ -27,10 +27,14 @@ mrs_base_path: "/mrs"
 mrs_data_dir_path: "{{ mrs_base_path }}/data"
 
 # admin credentials
-mrs_admin_login: ''
-mrs_admin_password: ''
+mrs_auth_admin_login: ''
+mrs_auth_admin_password: ''
 # list of IPs allowed to access admin endpoints
-mrs_admin_ips: []
+mrs_auth_admin_ips: []
+
+# discovery credentials
+mrs_auth_discovery_login: ''
+mrs_auth_discovery_password: ''
 
 # CORS
 mrs_cors_allow_origins: ['*']

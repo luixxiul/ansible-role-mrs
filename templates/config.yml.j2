@@ -1,8 +1,12 @@
 port: 8080
-admin:
-  login: {{ mrs_admin_login }}
-  password: {{ mrs_admin_password }}
-  ips: {{ mrs_admin_ips }}
+auth:
+  admin:
+    login: {{ mrs_auth_admin_login }}
+    password: {{ mrs_auth_admin_password }}
+    ips: {{ mrs_auth_admin_ips }}
+  discovery:
+    login: {{ mrs_auth_discovery_login }}
+    password: {{ mrs_auth_discovery_password }}
 cors:
   allow_origins: {{ mrs_cors_allow_origins }}
   allow_methods: {{ mrs_cors_allow_methods }}
