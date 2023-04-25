@@ -39,7 +39,6 @@ mrs_auth_discovery_password: ''
 # CORS
 mrs_cors_allow_origins: ['*']
 mrs_cors_allow_methods: ['GET', 'POST']
-mrs_cors_allow_headers: []
 mrs_cors_max_age: 0
 
 # cache
