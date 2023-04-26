@@ -26,6 +26,9 @@ mrs_container_additional_networks: []
 mrs_base_path: "/mrs"
 mrs_data_dir_path: "{{ mrs_base_path }}/data"
 
+# public url for avatars and whatnot
+mrs_public_url: "https://{{ mrs_hostname }}"
+
 # admin credentials
 mrs_auth_admin_login: ''
 mrs_auth_admin_password: ''
