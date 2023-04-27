@@ -8,6 +8,9 @@ auth:
   discovery:
     login: {{ mrs_auth_discovery_login }}
     password: {{ mrs_auth_discovery_password }}
+  moderation:
+    login: {{ mrs_auth_moderation_login }}
+    password: {{ mrs_auth_moderation_password }}
 cache:
   max_age: {{ mrs_cache_max_age }}
   bunny:
@@ -23,6 +26,8 @@ path:
   data: {{ mrs_path_data }}
 batch:
   rooms: {{ mrs_batch_rooms }}
+moderation:
+  webhook: {{ mrs_moderation_webhook }}
 workers:
   discovery: {{ mrs_workers_discovery }}
   parsing: {{ mrs_workers_parsing }}

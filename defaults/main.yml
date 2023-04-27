@@ -39,6 +39,13 @@ mrs_auth_admin_ips: []
 mrs_auth_discovery_login: ''
 mrs_auth_discovery_password: ''
 
+# moderation credentials
+mrs_auth_moderation_login: ''
+mrs_auth_moderation_password: ''
+
+# moderation config
+mrs_moderation_webhook: ''
+
 # CORS
 mrs_cors_allow_origins: ['*']
 mrs_cors_allow_methods: ['GET', 'POST']
