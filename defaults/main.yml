@@ -29,6 +29,10 @@ mrs_data_dir_path: "{{ mrs_base_path }}/data"
 # public url for avatars and whatnot
 mrs_public_url: "https://{{ mrs_hostname }}"
 
+# proxy config
+mrs_proxy_server: ''
+mrs_proxy_token: ''
+
 # admin credentials
 mrs_auth_admin_login: ''
 mrs_auth_admin_password: ''

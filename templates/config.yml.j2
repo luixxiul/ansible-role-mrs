@@ -1,5 +1,8 @@
 port: 8080
 public_url: {{ mrs_public_url }}
+proxy:
+  server: {{ mrs_proxy_server }}
+  token: {{ mrs_proxy_token }}
 auth:
   admin:
     login: {{ mrs_auth_admin_login }}
