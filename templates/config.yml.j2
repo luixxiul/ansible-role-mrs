@@ -1,5 +1,8 @@
 port: 8080
-public_url: {{ mrs_public_url }}
+public:
+  name: {{ mrs_public_name }}
+  ui: {{ mrs_public_ui }}
+  api: {{ mrs_public_api }}
 proxy:
   server: {{ mrs_proxy_server }}
   token: {{ mrs_proxy_token }}
@@ -34,6 +37,16 @@ moderation:
 workers:
   discovery: {{ mrs_workers_discovery }}
   parsing: {{ mrs_workers_parsing }}
+email:
+  postmark:
+    server_token: {{ mrs_email_postmark_server_token }}
+    report:
+      message_stream: {{ mrs_email_postmark_report_message_stream }}
+      from: {{ mrs_email_postmark_report_from }}
+  templates:
+    report:
+      subject: {{ mrs_email_templates_report_subject }}
+      body: {{ mrs_email_templates_report_body|to_yaml }}
 languages: {{ mrs_languages }}
 servers: {{ mrs_servers }}
 

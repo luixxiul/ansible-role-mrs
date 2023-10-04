@@ -26,8 +26,9 @@ mrs_container_additional_networks: []
 mrs_base_path: "/mrs"
 mrs_data_dir_path: "{{ mrs_base_path }}/data"
 
-# public url for avatars and whatnot
-mrs_public_url: "https://{{ mrs_hostname }}"
+mrs_public_name: MRS
+mrs_public_ui: "https://{{ mrs_hostname }}"
+mrs_public_api: "https://{{ mrs_hostname }}"
 
 # proxy config
 mrs_proxy_server: ''
@@ -77,6 +78,32 @@ mrs_batch_rooms: 10000
 # workers config
 mrs_workers_discovery: 20
 mrs_workers_parsing: 5
+
+# postmark config
+mrs_email_postmark_server_token: ''
+
+# postmark config for reports
+mrs_email_postmark_report_message_stream: ''
+mrs_email_postmark_report_from: ''
+
+# email templates (report)
+mrs_email_templates_report_subject: "{% raw %}{{ .Public.Name }}: Room {{ .Room.ID }} has been reported{% endraw %}"
+mrs_email_templates_report_body: |-
+  {% raw %}Hello,
+
+  The room "[{{ .Room.ID }}](https://matrix.to/#/{{ .Room.ID }})" has been reported
+  on [{{ .Public.Name }}]({{ .Public.UI }}) (a [Matrix Rooms Search](https://gitlab.com/etke.cc/mrs/api) instance).
+
+  Reporter provided the following reason:
+
+  ```
+  {{ .Reason }}
+  ```
+
+  ---
+
+  This automatic email was sent by [{{ .Public.Name }}]({{ .Public.UI }}) (a [Matrix Rooms Search](https://gitlab.com/etke.cc/mrs/api) instance) because you listed that email address as contact point (Matrix MSC1929 proposal).
+  If you have any questions - please, use the [{{ .Public.Name }}]({{ .Public.UI }}) website.{% endraw %}
 
 # language detection config
 mrs_languages:
