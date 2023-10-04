@@ -45,7 +45,7 @@ email:
       from: {{ mrs_email_postmark_report_from }}
   templates:
     report:
-      subject: {{ mrs_email_templates_report_subject }}
+      subject: {{ mrs_email_templates_report_subject|to_yaml }}
       body: {{ mrs_email_templates_report_body|to_yaml }}
 languages: {{ mrs_languages }}
 servers: {{ mrs_servers }}
