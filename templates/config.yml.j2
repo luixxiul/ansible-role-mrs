@@ -18,7 +18,10 @@ auth:
     login: {{ mrs_auth_moderation_login }}
     password: {{ mrs_auth_moderation_password }}
   search:
-    {{ mrs_auth_search|to_nice_yaml(width=99999)|indent }}
+{% for item in mrs_auth_search|default({})|dict2items %}
+    {{ item.key }}: {{ item.value }}
+{% endfor %}
+
 cache:
   max_age: {{ mrs_cache_max_age }}
   bunny:
