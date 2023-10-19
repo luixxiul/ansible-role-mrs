@@ -54,5 +54,8 @@ email:
       body: {{ mrs_email_templates_report_body|to_yaml }}
 languages: {{ mrs_languages }}
 servers: {{ mrs_servers }}
+blocklist:
+  servers: {{ mrs_blocklist_servers }}
+  queries: {{ mrs_blocklist_queries }}
 
 # vi: ft=yaml

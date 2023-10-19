@@ -116,6 +116,11 @@ mrs_languages:
 # servers bootstrap
 mrs_servers: []
 
+# servers to avoid
+mrs_blocklist_servers: []
+# words to avoid in search
+mrs_blocklist_queries: []
+
 mrs_systemd_required_systemd_services_list: ['docker.service']
 
 # mrs_container_labels_traefik_enabled controls whether labels to assist a Traefik reverse-proxy will be attached to the container.
