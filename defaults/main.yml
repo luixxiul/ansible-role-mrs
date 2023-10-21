@@ -44,9 +44,6 @@ mrs_auth_admin_ips: []
 mrs_auth_discovery_login: ''
 mrs_auth_discovery_password: ''
 
-# optional search credentials, format: login:password
-mrs_auth_search: {}
-
 # moderation credentials
 mrs_auth_moderation_login: ''
 mrs_auth_moderation_password: ''
