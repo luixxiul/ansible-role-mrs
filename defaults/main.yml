@@ -34,6 +34,10 @@ mrs_public_api: "https://{{ mrs_hostname }}"
 mrs_proxy_server: ''
 mrs_proxy_token: ''
 
+# matrix server config
+mrs_matrix_server_name: ''
+mrs_matrix_keys: []
+
 # admin credentials
 mrs_auth_admin_login: ''
 mrs_auth_admin_password: ''

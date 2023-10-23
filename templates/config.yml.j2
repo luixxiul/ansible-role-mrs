@@ -6,6 +6,9 @@ public:
 proxy:
   server: {{ mrs_proxy_server }}
   token: {{ mrs_proxy_token }}
+matrix:
+  server_name: {{ mrs_matrix_server_name }}
+  keys: {{ mrs_matrix_keys }}
 auth:
   admin:
     login: {{ mrs_auth_admin_login }}
