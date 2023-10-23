@@ -49,7 +49,12 @@ mrs_auth_moderation_login: ''
 mrs_auth_moderation_password: ''
 
 # moderation config
+# deprecated
 mrs_moderation_webhook: ''
+
+# webhooks
+mrs_webhooks_moderation: "{{ mrs_moderation_webhook }}"
+mrs_webhooks_stats: ''
 
 # CORS
 mrs_cors_allow_origins: ['*']

@@ -33,8 +33,9 @@ path:
   data: {{ mrs_path_data }}
 batch:
   rooms: {{ mrs_batch_rooms }}
-moderation:
-  webhook: {{ mrs_moderation_webhook }}
+webhooks:
+  moderation: {{ mrs_webhooks_moderation }}
+  stats: {{ mrs_webhooks_stats }}
 workers:
   discovery: {{ mrs_workers_discovery }}
   parsing: {{ mrs_workers_parsing }}
