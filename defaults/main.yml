@@ -30,10 +30,6 @@ mrs_public_name: MRS
 mrs_public_ui: "https://{{ mrs_hostname }}"
 mrs_public_api: "https://{{ mrs_hostname }}"
 
-# proxy config
-mrs_proxy_server: ''
-mrs_proxy_token: ''
-
 # matrix server config
 mrs_matrix_server_name: ''
 mrs_matrix_keys: []
@@ -52,12 +48,8 @@ mrs_auth_discovery_password: ''
 mrs_auth_moderation_login: ''
 mrs_auth_moderation_password: ''
 
-# moderation config
-# deprecated
-mrs_moderation_webhook: ''
-
 # webhooks
-mrs_webhooks_moderation: "{{ mrs_moderation_webhook }}"
+mrs_webhooks_moderation: ''
 mrs_webhooks_stats: ''
 
 # CORS
