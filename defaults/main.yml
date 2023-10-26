@@ -65,13 +65,13 @@ mrs_auth_metrics_ips: []
 mrs_auth_discovery_login: ''
 mrs_auth_discovery_password: ''
 # list of IPs allowed to access discovery endpoints
-mrs_auth_admin_ips: []
+mrs_auth_discovery_ips: []
 
 # moderation credentials
 mrs_auth_moderation_login: ''
 mrs_auth_moderation_password: ''
 # list of IPs allowed to access moderation endpoints
-mrs_auth_admin_ips: []
+mrs_auth_moderation_ips: []
 
 # webhooks
 mrs_webhooks_moderation: ''
