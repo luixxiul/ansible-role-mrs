@@ -17,12 +17,18 @@ auth:
     login: {{ mrs_auth_admin_login }}
     password: {{ mrs_auth_admin_password }}
     ips: {{ mrs_auth_admin_ips }}
+  metrics:
+    login: {{ mrs_auth_metrics_login }}
+    password: {{ mrs_auth_metrics_password }}
+    ips: {{ mrs_auth_metrics_ips }}
   discovery:
     login: {{ mrs_auth_discovery_login }}
     password: {{ mrs_auth_discovery_password }}
+    ips: {{ mrs_auth_discovery_ips }}
   moderation:
     login: {{ mrs_auth_moderation_login }}
     password: {{ mrs_auth_moderation_password }}
+    ips: {{ mrs_auth_moderation_ips }}
 
 cache:
   max_age: {{ mrs_cache_max_age }}
