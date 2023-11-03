@@ -38,16 +38,6 @@ mrs_matrix_keys: []
 mrs_search_defaults_limit: 10
 mrs_search_defaults_offset: 0
 mrs_search_defaults_sort_by: "-_score"
-mrs_search_empty_results:
-  - id: "!stub1:example.com"
-    alias: "#welcome:example.com"
-    name: "Welcome to the MRS"
-    topic: "Search something!"
-    avatar: "mxc://etke.cc/EPswbbDKYLNEjRYgEpHpRQue" # MRS room (#mrs:etke.cc) avatar
-    avatar_url: "https://apicdn.matrixrooms.info/avatar/etke.cc/EPswbbDKYLNEjRYgEpHpRQue" # MRS room (#mrs:etke.cc) avatar
-    server: "example.com"
-    members: 1
-    language: "-"
 
 # admin credentials
 mrs_auth_admin_login: ''
