@@ -24,6 +24,7 @@ ExecStartPre={{ devture_systemd_docker_base_host_command_docker }} create \
 			{% if mrs_container_http_bind_port %}
 			-p {{ mrs_container_http_bind_port }}:8080 \
 			{% endif %}
+			--ulimit nofile=262144:262144 \
 			--label-file={{ mrs_base_path }}/labels \
 			--mount type=bind,src={{ mrs_base_path }},dst=/mnt \
 			--tmpfs=/tmp:rw,noexec,nosuid,size=512m \

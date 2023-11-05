@@ -26,6 +26,8 @@ mrs_container_additional_networks: []
 mrs_base_path: "/mrs"
 mrs_data_dir_path: "{{ mrs_base_path }}/data"
 
+mrs_sentry_dsn: ''
+
 mrs_public_name: MRS
 mrs_public_ui: "https://{{ mrs_hostname }}"
 mrs_public_api: "https://{{ mrs_hostname }}"
