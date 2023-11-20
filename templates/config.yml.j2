@@ -67,5 +67,8 @@ servers: {{ mrs_servers }}
 blocklist:
   servers: {{ mrs_blocklist_servers }}
   queries: {{ mrs_blocklist_queries }}
+experiments:
+  in_memory_index: {{ mrs_experiments_in_memory_index|bool }}
+  fake_aliases: {{ mrs_experiments_fake_aliases|bool }}
 
 # vi: ft=yaml
