@@ -82,6 +82,10 @@ mrs_cache_max_age_search: 0
 mrs_cache_bunny_url: ''
 mrs_cache_bunny_key: ''
 
+# plausible.io
+mrs_plausible_host: ''
+mrs_plausible_domain: ''
+
 # cron
 mrs_cron_discovery: ''
 mrs_cron_parsing: ''
