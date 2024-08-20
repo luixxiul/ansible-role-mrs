@@ -10,12 +10,12 @@ mrs_hostname: ''
 mrs_uid: ''
 mrs_gid: ''
 
-mrs_version: latest
+mrs_version: v0.1.0
 
-mrs_container_image: "{{ mrs_container_image_registry_prefix }}etke.cc/mrs/api:{{ mrs_container_image_tag }}"
+mrs_container_image: "{{ mrs_container_image_registry_prefix }}etkecc/mrs:{{ mrs_container_image_tag }}"
 mrs_container_image_tag: "{{ mrs_version }}"
 mrs_container_image_force_pull: "{{ mrs_container_image.endswith(':latest') }}"
-mrs_container_image_registry_prefix: registry.gitlab.com/
+mrs_container_image_registry_prefix: ghcr.io/
 
 mrs_container_network: "{{ mrs_identifier }}"
 
