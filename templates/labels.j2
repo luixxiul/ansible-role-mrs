@@ -8,6 +8,7 @@ traefik.docker.network={{ mrs_container_labels_traefik_docker_network }}
 traefik.http.services.{{ mrs_identifier }}.loadbalancer.server.port=8080
 
 traefik.http.middlewares.{{ mrs_identifier }}-cors.headers.accesscontrolallowmethods={{ mrs_cors_allow_methods | join(',') }}
+traefik.http.middlewares.{{ mrs_identifier }}-cors.headers.accesscontrolallowheaders={{ mrs_cors_allow_headers | join(',') }}
 traefik.http.middlewares.{{ mrs_identifier }}-cors.headers.accesscontrolalloworiginlist={{ mrs_cors_allow_origins | join(',') }}
 traefik.http.middlewares.{{ mrs_identifier }}-cors.headers.accesscontrolmaxage={{ mrs_cors_max_age }}
 traefik.http.middlewares.{{ mrs_identifier }}-cors.headers.addvaryheader=true
