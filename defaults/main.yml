@@ -96,6 +96,7 @@ mrs_cron_full: ''
 # paths inside container
 mrs_path_index: "/mnt/data/index"
 mrs_path_data: "/mnt/data/data.db"
+mrs_path_media: "/mnt/data/media"
 mrs_path_config: "/mnt/config.yml"
 
 # batches config
