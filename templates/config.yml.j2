@@ -1,5 +1,8 @@
 port: 8080
 sentry_dsn: {{ mrs_sentry_dsn }}
+healthchecks:
+  url: {{ mrs_healthchecks_url }}
+  uuid: {{ mrs_healthchecks_uuid }}
 public:
   name: {{ mrs_public_name }}
   ui: {{ mrs_public_ui }}

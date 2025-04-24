@@ -27,6 +27,8 @@ mrs_base_path: "/mrs"
 mrs_data_dir_path: "{{ mrs_base_path }}/data"
 
 mrs_sentry_dsn: ''
+mrs_healthchecks_url: 'https://hc-ping.com'
+mrs_healthchecks_uuid: ''
 
 mrs_public_name: MRS
 mrs_public_ui: "https://{{ mrs_hostname }}"
