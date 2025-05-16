@@ -10,6 +10,9 @@ Description=Matrix Rooms Search API ({{ mrs_identifier }})
 Requires={{ service }}
 After={{ service }}
 {% endfor %}
+{% for service in mrs_systemd_wanted_services_list %}
+Wants={{ service }}
+{% endfor %}
 DefaultDependencies=no
 
 [Service]
