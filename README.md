@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 Nikita Chernyi
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+
 # Matrix Rooms Search API Ansible role
 
 This is an [Ansible](https://www.ansible.com/) role which installs the [Matrix Rooms Search API](https://gitlab.com/etke.cc/mrs/api) container image distribution registry to run as a [Docker](https://www.docker.com/) container wrapped in a systemd service.
