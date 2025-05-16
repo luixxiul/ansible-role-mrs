@@ -11,7 +11,7 @@ traefik.enable=true
 traefik.docker.network={{ mrs_container_labels_traefik_docker_network }}
 {% endif %}
 
-traefik.http.services.{{ mrs_identifier }}.loadbalancer.server.port=8080
+traefik.http.services.{{ mrs_identifier }}.loadbalancer.server.port={{ mrs_container_http_port }}
 
 traefik.http.middlewares.{{ mrs_identifier }}-cors.headers.accesscontrolallowmethods={{ mrs_cors_allow_methods | join(',') }}
 traefik.http.middlewares.{{ mrs_identifier }}-cors.headers.accesscontrolallowheaders={{ mrs_cors_allow_headers | join(',') }}
