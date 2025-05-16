@@ -174,6 +174,9 @@ mrs_systemd_required_services_list_default: "{{ [devture_systemd_docker_base_doc
 mrs_systemd_required_services_list_auto: []
 mrs_systemd_required_services_list_custom: []
 
+# List of systemd services that the MRS systemd service wants
+mrs_systemd_wanted_services_list: []
+
 # mrs_container_labels_traefik_enabled controls whether labels to assist a Traefik reverse-proxy will be attached to the container.
 # See `../templates/labels.j2` for details.
 #
