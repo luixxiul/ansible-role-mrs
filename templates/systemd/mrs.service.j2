@@ -22,11 +22,11 @@ ExecStartPre={{ devture_systemd_docker_base_host_command_docker }} create \
 			--rm \
 			--name={{ mrs_identifier }} \
 			--log-driver=none \
-			--network={{ mrs_container_network }} \
 			--user={{ mrs_uid }}:{{ mrs_gid }} \
 			--cap-drop=ALL \
 			--read-only \
 			--hostname={{ mrs_hostname }} \
+			--network={{ mrs_container_network }} \
 			{% if mrs_container_http_bind_port %}
 			-p {{ mrs_container_http_bind_port }}:{{ mrs_container_http_port }} \
 			{% endif %}
