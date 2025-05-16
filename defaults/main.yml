@@ -1,4 +1,8 @@
 # SPDX-FileCopyrightText: 2023 - 2025 Nikita Chernyi
+# SPDX-FileCopyrightText: 2023 - 2025 Slavi Pantaleev
+# SPDX-FileCopyrightText: 2024 Sergio Durigan Junior
+# SPDX-FileCopyrightText: 2025 MASH project contributors
+# SPDX-FileCopyrightText: 2025 Suguru Hirahara
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -18,8 +22,10 @@ mrs_version: v0.1.0
 
 mrs_container_image: "{{ mrs_container_image_registry_prefix }}etkecc/mrs:{{ mrs_container_image_tag }}"
 mrs_container_image_tag: "{{ mrs_version }}"
+mrs_container_image_registry_prefix: "{{ mrs_container_image_registry_prefix_upstream }}"
+mrs_container_image_registry_prefix_upstream: "{{ mrs_container_image_registry_prefix_upstream_default }}"
+mrs_container_image_registry_prefix_upstream_default: ghcr.io/
 mrs_container_image_force_pull: "{{ mrs_container_image.endswith(':latest') }}"
-mrs_container_image_registry_prefix: ghcr.io/
 
 # The base container network. It will be auto-created by this role if it doesn't exist already.
 mrs_container_network: "{{ mrs_identifier }}"
