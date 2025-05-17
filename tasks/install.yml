@@ -24,6 +24,7 @@
     mode: 0640
   with_items:
     - config.yml
+    - env
     - labels
 
 - name: Ensure MRS container image is pulled
