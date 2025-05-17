@@ -188,10 +188,10 @@ mrs_container_http_bind_port: ''
 #   another.label="here"
 mrs_container_labels_additional_labels: ''
 
-# mrs_container_additional_environment_variables contains a multiline string with additional environment variables to pass to the container.
+# mrs_environment_variables_additional_variables contains a multiline string with additional environment variables to pass to the container.
 #
 # Example:
-# mrs_container_additional_environment_variables: |
+# mrs_environment_variables_additional_variables: |
 #   VAR=1
 #   ANOTHER=value
-mrs_container_additional_environment_variables: ''
+mrs_environment_variables_additional_variables: ''
