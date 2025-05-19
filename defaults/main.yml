@@ -153,6 +153,8 @@ mrs_languages:
 # servers bootstrap
 mrs_servers: []
 
+# ips to reject requests from
+mrs_blocklist_ips: []
 # servers to avoid
 mrs_blocklist_servers: []
 # words to avoid in search
