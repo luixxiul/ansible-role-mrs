@@ -5,11 +5,14 @@
 
 ---
 
-- block:
-    - when: mrs_enabled | bool
+- name: Perform MRS installation tasks
+  block:
+    - name: Validate MRS configuration
+      when: mrs_enabled | bool
       ansible.builtin.include_tasks: "{{ role_path }}/tasks/validate_config.yml"
 
-    - when: mrs_enabled | bool
+    - name: Install MRS
+      when: mrs_enabled | bool
       ansible.builtin.include_tasks: "{{ role_path }}/tasks/install.yml"
   tags:
     - setup-all
@@ -17,8 +20,10 @@
     - install-all
     - install-mrs
 
-- block:
-    - when: not mrs_enabled | bool
+- name: Perform MRS uninstallation tasks
+  block:
+    - name: Uninstall MRS
+      when: not mrs_enabled | bool
       ansible.builtin.include_tasks: "{{ role_path }}/tasks/uninstall.yml"
   tags:
     - setup-all
