@@ -166,7 +166,7 @@ mrs_blocklist_servers: []
 # words to avoid in search
 mrs_blocklist_queries: []
 
-mrs_systemd_required_services_list: ['docker.service']
+mrs_systemd_required_services_list: "{{ [devture_systemd_docker_base_docker_service_name] if devture_systemd_docker_base_docker_service_name else [] }}"
 
 # mrs_container_labels_traefik_enabled controls whether labels to assist a Traefik reverse-proxy will be attached to the container.
 # See `../templates/labels.j2` for details.
